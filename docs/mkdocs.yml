@@ -1,0 +1,43 @@
+site_name: Documentação com MkDocs
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: White mode
+
+
+# Repository
+repo_name: 'CVM_CDA'
+repo_url: 'https://github.com/vitoleite/documentacao_mkdocs'
+
+# Extensions
+markdown_extensions:
+  - pymdownx.superfences: # code higlight
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.inlinehilite
+  - pymdownx.emoji      # suporte a emoji
+  - pymdownx.tasklist   # suporte a tasklist
+  - pymdownx.mark       # suporte a marcações
+  - pymdownx.highlight  # suporte a higlight
+
+extra_css:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.5.1/dist/mermaid.min.js
